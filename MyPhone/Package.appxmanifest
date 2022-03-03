@@ -45,6 +45,11 @@
           <uap:Rotation Preference="portrait"/>
           <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.appService">
+          <uap:AppService Name="MyPhoneBridge"/>
+        </uap:Extension>
+      </Extensions>
     </Application>
   </Applications>
 

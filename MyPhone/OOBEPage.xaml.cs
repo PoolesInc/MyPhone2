@@ -1,7 +1,9 @@
 ﻿// OOBEPage
+// OOBE Page wizart (hangling some work at "first start")
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -16,30 +18,30 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-using GoodTimeStudio.MyPhone.Models;
+using GoodTimeStudio.MyPhone.ViewModels;
 
 
-// GoodTimeStudio.MyPhone namespace
+// namespace
 namespace GoodTimeStudio.MyPhone
 {
-    // OOBEPage class
+    // OOBEPage 
     public sealed partial class OOBEPage : Page
     {
-        //
+        // OOBE Page vm
         public OOBEPageViewModel ViewModel;
 
-        //
+        // Bluetooth DeviceList vm
         public BluetoothDeviceListViewModel DListModel;
 
-        //
         MenuFlyout _ContextMenu;
 
-
-        #region "constructor" 
+        // OOBEPage
         public OOBEPage()
         {
             this.InitializeComponent();
+
             DListModel = _List.ViewModel;
+            
             ViewModel = new OOBEPageViewModel(DListModel);
 
             _ContextMenu = new MenuFlyout();
@@ -48,10 +50,9 @@ namespace GoodTimeStudio.MyPhone
             Style style = new Style(typeof(MenuFlyoutPresenter));
             style.Setters.Add(new Setter(Windows.UI.Xaml.FrameworkElement.MinWidthProperty, 150));
             _ContextMenu.MenuFlyoutPresenterStyle = style;
-        }
-        #endregion
 
-        #region "oobe"
+        }//OOBEPage end 
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -61,14 +62,45 @@ namespace GoodTimeStudio.MyPhone
 
         private async void Button_Connect_Click(object sender, RoutedEventArgs e)
         {
-            // Non-operable at now. TODO
-            await ViewModel.Connect();
-
-            _ContextMenu.ShowAt(grid);
-
+            try
+            {
+                await ViewModel.Connect();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[ex] OOBEPage ViewModel.Connect Exception: " +
+                    ex.Message);
+            }
         }
-        #endregion
 
-    }//class end
+        private async void ButtonDeviceScanStart_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            try
+            {
+                //await 
+                DListModel.DeviceScanStart();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[ex] OOBEPage ViewModel.Connect Exception: " +
+                    ex.Message);
+            }
+        }
 
-}//namespace end
+        private async void ButtonDeviceScanStop_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            try
+            {
+                //await 
+                DListModel.DeviceScanStop();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[ex] OOBEPage ViewModel.Connect Exception: " +
+                    ex.Message);
+            }
+        }
+    }
+}

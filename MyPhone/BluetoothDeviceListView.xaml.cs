@@ -1,12 +1,13 @@
 ﻿// BluetoothDeviceListView
+// UserControl
 
-using GoodTimeStudio.MyPhone.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -17,25 +18,28 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using GoodTimeStudio.MyPhone.ViewModels;
+
 
 // GoodTimeStudio.MyPhone namespace
+
 namespace GoodTimeStudio.MyPhone
 {
-    // BluetoothDeviceListView class
+    // BluetoothDeviceListView class 
     public sealed partial class BluetoothDeviceListView : UserControl
     {
-        //
+        // vm
         public BluetoothDeviceListViewModel ViewModel;
-
 
         // BluetoothDeviceListView
         public BluetoothDeviceListView()
         {
             this.InitializeComponent();
+
             ViewModel = new BluetoothDeviceListViewModel();
 
-        }//BluetoothDeviceListView end
+        }//
 
-    }//BluetoothDeviceListView
+    }//BluetoothDeviceListView end
 
-}// 
+}//namespace end
