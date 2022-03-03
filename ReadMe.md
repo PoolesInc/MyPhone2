@@ -6,15 +6,14 @@ My [Lumia]phone assistant
 Status: alpha (RnD)
 
 ## The beginning 
-When web-serfing I found some source code of "MyPhone" App (for iPhone Android-phone/Win10Mobile phone "interconnect"?). 
-
+When web-serfing I found some source code of "MyPhone" App (for iPhone/ Android-phone / Windows 10 Mobile phone "interconnect"... 
 The code was uncomplete (legasy?), 3 years old. But the idea for "any phone" BT linking is interesting , IMHO.
 
-I started to exploring GitHub. My finding: 
+I started to exploring GitHub. My fast finding (thanks code mathing github's superfeature): 
 
 https://github.com/BestOwl/MyPhone/  
 
-This code seems to be ok... idk... so, I forked the "newest" code (2 years old, heh!)
+This code seems to be ok... idk... so, I forked the "newest" code... it's 2 years old, heh! :)
 
 ## Progress 
 - I am trying to find some analouges that support BT links between PC and My winphone Lumia...
