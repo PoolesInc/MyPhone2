@@ -20,10 +20,10 @@ This code seems to be ok... idk... so, I forked the "newest" code (2 years old, 
 - I am trying to find some analouges that support BT links between PC and My winphone Lumia...
 
 ## Project Status
-- RnD (sdk, apps, etc.) >> [5%]
-- Design (artwork, etc.) +- [30%]
-- Tech. project (Desktop Bridge, Systray, etc.)+- [20%]
-- Dev (Codebase) - [0%]
+- RnD (sdk, apps, etc.) >> [75%]
+- Design (artwork, etc.) +- [50%]
+- Tech. project (Desktop Bridge, Systray, etc.)+- [50%]
+- Dev (Codebase) - [30%]
 - "Intro" (Bringing some result to Lumia fans...)- [0%]
 
 ## Screenshots
@@ -33,7 +33,7 @@ This code seems to be ok... idk... so, I forked the "newest" code (2 years old, 
 ![Shot 4](Images/shot4.png)
 ![Shot 5](Images/shot5.png)
 ![Shot 6](Images/shot6.png)
-
+![Shot 7](Images/shot7.png)
 
 ## Tech. reqs
 - "Standard" os build - 10.0.18362.2005 (WinSDK 18362)
@@ -60,6 +60,6 @@ This code seems to be ok... idk... so, I forked the "newest" code (2 years old, 
 5. Build and run 
 
 ##Thanks
-BestOwl (https://github.com/BestOwl/MyPhone/)
+[BestOwl](https://github.com/BestOwl/MyPhone/) MyPhone's developer/author
 
 -- [m][e] 2022 
