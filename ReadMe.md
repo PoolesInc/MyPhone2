@@ -37,7 +37,7 @@ This code seems to be ok... idk... so, I forked the "newest" code... it's 2 year
 ## Tech. reqs
 - "Standard" os build - 10.0.18362.2005 (WinSDK 18362)
 - Min os build - 10.0.18362.2005 
-- Some phone (W10M, iPhone on Android based) with active SIM card (calls/messages)
+- Some phone (W10M, iPhone on Android based) with active SIM card (calls/messages) and active BT connection (to your note/PC)
 
 ## My fast RnD details
 - I havenot any SIM installed in my Lumia phone... so, I cannot debug phoneline/calls "interconnect"
@@ -50,15 +50,17 @@ This code seems to be ok... idk... so, I forked the "newest" code... it's 2 year
 - Visual Studio 2022 with .NET, UWP and C++ workload
 - Lumia phone (or other mobile device) 
 
-### Build
+## Build
 1. Clone repo
    `git clone --recursive https://github.com/BestOwl/MyPhone.git`
 2. Open `MyPhone.sln` with Visual Studio
 3. Set `PackageProject` as startup project
 4. Set build architecture to ARM, x86 or x64. (AnyCPU is not supported)
-5. Build and run 
+5. Build and run
+6. Research this "codebase", and improve app logics (do app/images/music/photos sync , etc.) 
+7. Enjoy the desktop bridge tech :)
 
-##Thanks
+## Thanks
 [BestOwl](https://github.com/BestOwl/MyPhone/) MyPhone's developer/author
 
 -- [m][e] 2022 
